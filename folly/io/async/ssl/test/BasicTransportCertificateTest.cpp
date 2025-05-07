@@ -25,7 +25,7 @@ using namespace folly;
 using namespace folly::ssl;
 using folly::test::find_resource;
 
-const char* kTestCerts = "folly/io/async/ssl/test/tests-cert.pem";
+const char* kTestCerts = "folly/io/async/test/certs/tests-cert.pem";
 
 TEST(BasicTransportCertificateTest, TestCerts) {
   auto path = find_resource(kTestCerts);

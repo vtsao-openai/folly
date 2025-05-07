@@ -22,6 +22,8 @@
 
 using namespace folly::test;
 
+#include <iomanip>
+
 // use option --benchmark to run folly::Benchmark
 // use option --direct to run direct benchmark measurements
 DEFINE_bool(direct, false, "run direct measurement");

@@ -34,6 +34,8 @@ DEFINE_int64(num_reps, 10, "Number of test reps");
 DEFINE_int32(num_threads, 6, "Number of threads");
 DEFINE_int64(num_ops, 1003, "Number of ops or pairs of ops per rep");
 
+#include <iomanip>
+
 using folly::default_hazptr_domain;
 using folly::hazard_pointer;
 using folly::hazard_pointer_clean_up;

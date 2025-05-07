@@ -31,8 +31,8 @@ using namespace testing;
 using namespace folly;
 using folly::test::find_resource;
 
-const char* kTestCertWithoutSan = "folly/ssl/test/tests-cert.pem";
-const char* kTestCa = "folly/ssl/test/ca-cert.pem";
+const char* kTestCertWithoutSan = "folly/io/async/test/certs/tests-cert.pem";
+const char* kTestCa = "folly/io/async/test/certs/ca-cert.pem";
 
 // Test key
 const std::string kTestKey = folly::stripLeftMargin(R"(

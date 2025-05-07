@@ -36,7 +36,9 @@ TEST_F(FiberIOExecutorTest, event_base) {
 
 TEST_F(FiberIOExecutorTest, basic_execution) {
   auto tpe = std::make_shared<folly::IOThreadPoolExecutor>(1);
-  folly::FiberIOExecutor e(tpe);
+  folly::fibers::FiberManager::Options opts;
+  opts.stackSize = 64 * 1024;
+  folly::FiberIOExecutor e(tpe, opts);
 
   // FiberIOExecutor should add tasks using the FiberManager mapped to the
   // IOThreadPoolExecutor's event base.
